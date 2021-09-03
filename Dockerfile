@@ -15,3 +15,5 @@ RUN apt update \
 
 # Install CookHLA and copy helper scripts
 RUN git clone https://github.com/WansonChoi/CookHLA.git /CookHLA
+COPY CookHLA MakeGeneticMap /usr/local/bin/
+WORKDIR /CookHLA

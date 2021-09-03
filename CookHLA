@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+PROGNAME="$(basename "$0")"
+PYTHON="$(which python3)"
+
+cd /CookHLA
+
+case "${PROGNAME}" in
+  CookHLA)
+    "${PYTHON}" CookHLA.py "$@"
+    ;;
+
+  MakeGeneticMap)
+    "${PYTHON}" -m "${PROGNAME}" "$@"
+    ;;
+
+  *)
+    >&2 echo "Unknown CookHLA command: ${PROGNAME}"
+    exit 1
+    ;;
+esac
