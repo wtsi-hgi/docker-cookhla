@@ -11,7 +11,7 @@ RUN apt update \
                    csh \
                    tcsh \
                    openjdk-8-jre \
- && pip install pandas>=0.25.3 pyliftover==0.4
+ && pip3 install "pandas>=0.25.3" "pyliftover==0.4"
 
 # Install CookHLA and copy helper scripts
 RUN git clone https://github.com/WansonChoi/CookHLA.git /CookHLA
